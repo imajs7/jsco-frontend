@@ -1,0 +1,54 @@
+.border {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.container > .form-title {
+  text-align: center;
+  margin-block-end: 30px;
+}
+
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container > form input[type="text"],
+.container > form input[type="email"],
+.container > form textarea {
+  border: none;
+  appearance: none;
+  outline: none;
+  background-color: inherit;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #999;
+}
+
+.container > form textarea {
+  margin-block-start: 20px;
+  border: 1px solid #999;
+}
+
+.container > form > .fullName {
+  display: flex;
+  gap: 20px;
+}
+
+.fullName > input {
+  width: calc(50% - 10px);
+}
+
+.email > input {
+  width: 100%;
+}
+
+.message > textarea {
+  width: 100%;
+}
+
+.buttons > button:not(:last-child) {
+  margin-inline-end: 20px;
+}
