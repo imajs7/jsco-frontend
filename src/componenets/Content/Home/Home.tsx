@@ -1,14 +1,10 @@
 import React from 'react';
-import getSiteInfo from '../../../services/fetchData';
 import useDocumentTitle from '../../../utils/useDocumentTitle';
 import './Home.css';
 
 const Home = () => {
 
     useDocumentTitle( `siteTitle` );
-
-    const data = getSiteInfo();
-    console.log( data );
     
     return ( 
         <>
