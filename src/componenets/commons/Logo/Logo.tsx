@@ -1,5 +1,4 @@
-import React, { useContext }  from 'react';
-import SiteContext from '../../../models/SiteContext';
+import React  from 'react';
 import './Logo.css';
 
 type Props = {
@@ -8,17 +7,15 @@ type Props = {
 
 const Logo = ( { textLogo } : Props ) => {
 
-    const { image, text } = useContext(SiteContext).siteLogo;
-
     return(
 
         <a href="/">
             <div className="logo">
                 {
                     textLogo ? (
-                        <span>{text}</span>
+                        <span>{`text logo`}</span>
                     ) : (
-                        <img src={image.dark} alt="" />
+                        <img src={`img logo`} alt="" />
                     ) 
                 }
             </div>

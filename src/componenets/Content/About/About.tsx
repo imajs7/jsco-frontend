@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
-import SiteContext from '../../../models/SiteContext';
+import React from 'react';
 import useDocumentTitle from '../../../utils/useDocumentTitle';
 
 const About = () => {
 
-    const { siteTitle } = useContext(SiteContext).siteInfo;
-
-    useDocumentTitle( siteTitle + ' | About');
+    useDocumentTitle( `siteTitle | About`);
 
     return ( 
         <>

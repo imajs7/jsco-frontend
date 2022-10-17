@@ -1,11 +1,9 @@
-import React, { MouseEvent, useState, useContext } from 'react';
-import SiteContext from '../../../models/SiteContext';
+import React, { MouseEvent, useState } from 'react';
 import './Noticeboard.css';
 
 const Noticeboard = () => {
 
     const [showNotice, setShowNotice] = useState<boolean>( true );
-    const { notice } = useContext(SiteContext).communication;
 
     const dismiss = ( event : MouseEvent<HTMLButtonElement> ) => {
         event.preventDefault();
@@ -18,7 +16,7 @@ const Noticeboard = () => {
             {
                 showNotice &&
                 <div className='noticeboard'>
-                    <p>{notice}</p>
+                    <p>{`notice`}</p>
                     <button onClick={dismiss}>Dismiss</button>
                 </div>
             }

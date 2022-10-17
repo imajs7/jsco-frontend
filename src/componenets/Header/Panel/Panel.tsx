@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import SiteContext from '../../../models/SiteContext';
+import React from 'react';
 import './Panel.css';
 
 type Props = {
@@ -7,12 +6,10 @@ type Props = {
 }
 const Panel = ( { sponsor } : Props ) => {
 
-    const toShow = useContext(SiteContext).sponsor.sponsors[sponsor];
-
     return(
 
         <div className="banner">
-            <img src={toShow.banner} alt="" />
+            <img src={`//unsplash.it/1100/150`} alt="" />
         </div>
 
     );

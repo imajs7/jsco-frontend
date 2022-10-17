@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
-import SiteContext from '../../../models/SiteContext';
+import React from 'react';
 import './InfoPanel.css';
 import Logo from '../../commons/Logo/Logo';
 import Social from '../../commons/Social/Social';
 
 const InfoPanel = () => {
-
-    const { shortIntro } = useContext(SiteContext).siteInfo;
 
     return(
 
@@ -16,7 +13,7 @@ const InfoPanel = () => {
 
                 <Logo />
                 <p>
-                    {shortIntro}
+                    {`shortIntro`}
                 </p>
                 <Social />
 
