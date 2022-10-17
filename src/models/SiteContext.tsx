@@ -1,57 +1,57 @@
 import { createContext } from "react";
 
-const SiteContext = createContext( { 
-    siteLogo: {
-        image: {
-            light: '',
-            dark: '',
+const SiteContext = createContext( {
+    "siteLogo": {
+        "image": {
+            "light": "",
+            "dark": ""
         },
-        text: '',
+        "text": ""
     },
-    siteInfo: {
-        siteTitle: '',
-        siteShortTitle: '',
-        siteTagline: '',
-        shortIntro: ''
+    "siteInfo": {
+        "siteTitle": "",
+        "siteShortTitle": "",
+        "siteTagline": "",
+        "shortIntro": ""
     },
-    socialMedia: {
-        facebook: '',
-        twitter: '',
-        github: '',
-        telegram: '',
-        linkedin: '',
+    "socialMedia": {
+        "facebook": "",
+        "twitter": "",
+        "github": "",
+        "telegram": "",
+        "linkedin": ""
     },
-    techDetail: {
-        author: '',
-        authorProfile: '',
-        stack: '',
-        firstRelease: '',
-        lastUpdate: '',
-        version: '',
+    "techDetail": {
+        "author": "",
+        "authorProfile": "",
+        "stack": "",
+        "firstRelease": "",
+        "lastUpdate": "",
+        "version": ""
     },
-    communication: {
-        notice: '',
-        offers: {
-            hosting: '',
-            development: '',
-            manage: '',
+    "communication": {
+        "notice": "",
+        "offers": {
+            "hosting": "",
+            "development": "",
+            "manage": ""
         }
     },
-    sponsor: {
-        show: 0,
-        sponsors: [
+    "sponsor": {
+        "show": 0,
+        "sponsors": [
             {
-                sname: '',
-                banner: '',
-                link: '',
+                "sname": "",
+                "banner": "",
+                "link": ""
             },
             {
-                sname: '',
-                banner: '',
-                link: '',
+                "sname": "",
+                "banner": "",
+                "link": ""
             }
-        ],
+        ]
     }
- } );
+} );
 
 export default SiteContext;
