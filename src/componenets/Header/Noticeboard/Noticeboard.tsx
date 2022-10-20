@@ -1,22 +1,35 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useEffect, useState } from 'react';
+import getSiteData from '../../../services/fetchData';
 import './Noticeboard.css';
 
 const Noticeboard = () => {
 
-    const [showNotice, setShowNotice] = useState<boolean>( true );
+    const [ notice, setNotice ] = useState<string>('');
+
+    useEffect( () => {
+        async function getData() {
+            try{
+                const data = await getSiteData();
+                setNotice( data.notice );
+            } catch ( error ) {
+                setNotice( error as string );
+            }
+        }
+        getData();
+    }, []);
 
     const dismiss = ( event : MouseEvent<HTMLButtonElement> ) => {
         event.preventDefault();
-        setShowNotice( false );
+        setNotice( '' );
     };
 
     return(
 
         <>
             {
-                showNotice &&
+                ( notice !== '' ) && 
                 <div className='noticeboard'>
-                    <p>{`notice`}</p>
+                    <p>{notice}</p>
                     <button onClick={dismiss}>Dismiss</button>
                 </div>
             }

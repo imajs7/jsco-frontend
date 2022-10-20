@@ -3,7 +3,7 @@ import useDocumentTitle from '../../../utils/useDocumentTitle';
 
 const Services = () => {
 
-    useDocumentTitle( `siteTitle | Services`);
+    useDocumentTitle( 'JS Codes & Machine Learning | Services');
 
     return ( 
         <>

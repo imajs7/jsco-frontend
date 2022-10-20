@@ -13,7 +13,7 @@ const Footer = () => {
             <InfoPanel />
             
             <div className="copyright">
-                <h3>Copyright &copy; {year.getFullYear()} {`siteShortTitle`}</h3>
+                <h3>Copyright &copy; {year.getFullYear()} JSCoML</h3>
             </div>
 
         </div>

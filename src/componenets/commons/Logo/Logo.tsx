@@ -1,32 +1,19 @@
 import React  from 'react';
+import { Link } from 'react-router-dom';
 import './Logo.css';
 
-type Props = {
-    textLogo: boolean
-};
-
-const Logo = ( { textLogo } : Props ) => {
+const Logo = () => {
 
     return(
 
-        <a href="/">
+        <Link to="/">
             <div className="logo">
-                {
-                    textLogo ? (
-                        <span>{`text logo`}</span>
-                    ) : (
-                        <img src={`img logo`} alt="" />
-                    ) 
-                }
+                <span>JSCo.</span>
             </div>
-        </a>
+        </Link>
 
     );
 
 };
-
-Logo.defaultProps = {
-    textLogo: true
-}
 
 export default Logo;

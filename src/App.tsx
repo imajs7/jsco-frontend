@@ -3,9 +3,8 @@ import './App.css';
 import Header from './componenets/Header/Header';
 import Content from './componenets/Content/Content';
 import Footer from './componenets/Footer/Footer';
-import getSiteData from './services/fetchData';
 import { useLocation } from "react-router-dom";
-import SiteContext from './models/SiteContext';
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
 
@@ -18,26 +17,13 @@ function App() {
     return false;
   };
 
-  async function getHelper() {
-    try {
-      const data = await getSiteData();
-      console.log( data );
-      return data;
-    } catch( error ) {
-        console.log( error as Error );
-    }
-  }
-
   return (
-    <SiteContext.Provider value={ getHelper() }>
-
       <div className="App">
         <Header />
         <Content showPanel={isHome()} />
         <Footer />
+        <ScrollToTop width="20" height="20" smooth={true} />
       </div>
-
-    </SiteContext.Provider>
   );
 }
 

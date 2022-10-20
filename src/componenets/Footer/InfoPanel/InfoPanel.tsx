@@ -2,6 +2,7 @@ import React from 'react';
 import './InfoPanel.css';
 import Logo from '../../commons/Logo/Logo';
 import Social from '../../commons/Social/Social';
+import { siteInfo } from '../../../services/LocalData';
 
 const InfoPanel = () => {
 
@@ -13,7 +14,7 @@ const InfoPanel = () => {
 
                 <Logo />
                 <p>
-                    {`shortIntro`}
+                    {siteInfo.shortIntro}
                 </p>
                 <Social />
 
