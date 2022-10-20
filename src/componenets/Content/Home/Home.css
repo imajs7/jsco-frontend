@@ -20,12 +20,13 @@
 .hero-section > .site-info > h5 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 34px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black; */
 }
 
 .hero-section > p {
   width: min(100%, 800px);
+  font-size: 18px;
 }
 
 .call-to-action > *:not(:last-child) {

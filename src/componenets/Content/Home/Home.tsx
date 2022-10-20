@@ -7,6 +7,7 @@ import './Home.css';
 const Home = () => {
 
     const [ bgImage, setBgImage ] = useState<string>('linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9))');
+    const baseUrl = process.env.REACT_APP_BASE_URL;
 
     useDocumentTitle( 'JS Codes & Machine Learning' );
 
@@ -16,7 +17,7 @@ const Home = () => {
                 const data = await getSiteData();
                 if( data.bgImage !== undefined ) {
                     setBgImage( prevState => {
-                        return prevState + ', url("' + data.bgImage + '")';
+                        return prevState + ', url("' + baseUrl + data.bgImage + '")';
                     } );
                 }
             } catch ( error ) {

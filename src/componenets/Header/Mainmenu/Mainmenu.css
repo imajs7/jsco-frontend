@@ -1,17 +1,25 @@
-.mainmenu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
-nav > ul > li > a {
+.mainmenu {
+  display: flex;
+  align-items: center;
+}
+
+.mainmenu > li > a {
   font-weight: 600;
   color: black;
+  padding: 8px 12px;
+}
+
+.mainmenu > li > a:hover {
+  border-bottom: 4px solid white;
+}
+
+.active {
+  border-bottom: 4px solid white;
 }

@@ -1,4 +1,4 @@
-a:has(.logo) {
+a:has(.logo) > div > span {
   color: black;
 }
 
