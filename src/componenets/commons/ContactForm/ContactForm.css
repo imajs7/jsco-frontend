@@ -4,20 +4,25 @@
   padding: 30px;
 }
 
-.container > .form-title {
+.contact-form {
+  width: min(100% - 15px, 700px);
+  margin-inline: auto;
+}
+
+.contact-form > .form-title {
   text-align: center;
   margin-block-end: 30px;
 }
 
-.container > form {
+.contact-form > form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.container > form input[type="text"],
-.container > form input[type="email"],
-.container > form textarea {
+.contact-form > form input[type="text"],
+.contact-form > form input[type="email"],
+.contact-form > form textarea {
   border: none;
   appearance: none;
   outline: none;
@@ -27,12 +32,12 @@
   border-bottom: 1px solid #999;
 }
 
-.container > form textarea {
+.contact-form > form textarea {
   margin-block-start: 20px;
   border: 1px solid #999;
 }
 
-.container > form > .fullName {
+.contact-form > form > .fullName {
   display: flex;
   gap: 20px;
 }

@@ -32,3 +32,91 @@
 .call-to-action > *:not(:last-child) {
   margin-inline-end: 10px;
 }
+
+.our-usp {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-block: 80px;
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.4);
+  border-radius: 4px;
+}
+
+.card > div:not(:last-child) {
+  margin-block-end: 20px;
+}
+
+.card .usp--text--title {
+  font-size: 18px;
+  margin-block-end: 10px;
+}
+
+.card .fontawesome {
+  font-size: 36px;
+}
+
+.second-cta {
+  display: flex;
+  gap: 50px;
+  margin-block: 160px;
+}
+
+.second-cta--image > img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  height: 450px;
+  border-radius: 450px;
+  filter: drop-shadow(5px 5px 10px rgb(0 0 0 / 0.4));
+  border: 6px solid #aaa;
+}
+
+.second-cta--action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tech-stack--title {
+  margin-block-end: 20px;
+}
+
+.tech-stack--para {
+  width: min(100%, 700px);
+}
+
+.tech-stack--logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin-block-start: 50px;
+}
+
+.tech-stack-icons {
+  padding: 10px;
+  box-shadow: 0 0 10px rgb(0 0 0 /0.4);
+  display: grid;
+  place-content: center;
+  border-radius: 4px;
+  aspect-ratio: 1;
+}
+
+.tech-stack-icons > .fontawesome {
+  font-size: 46px;
+}
+
+@media screen and (max-width: 600px) {
+  .our-usp {
+    flex-direction: column;
+  }
+  .second-cta {
+    flex-direction: column;
+  }
+  .tech-stack--logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

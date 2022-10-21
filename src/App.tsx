@@ -22,7 +22,7 @@ function App() {
         <Header />
         <Content showPanel={isHome()} />
         <Footer />
-        <ScrollToTop width="20" height="20" smooth={true} />
+        <ScrollToTop width="16" height="16" smooth={true} />
       </div>
   );
 }

@@ -2,13 +2,11 @@ import './ContactForm.css';
 
 const ContactForm = () => {
     return ( 
-        <div className="container border">
+        <div className="contact-form border">
 
             <h2 className='form-title' id="get-a-quote">Get a Quote</h2>
             
-            <form name="contact" action="POST" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-
-                <input type="hidden" name="bot-field" />
+            <form name="contact" action="POST" method="POST">
 
                 <div className="fullName">
                     <input 
@@ -46,8 +44,6 @@ const ContactForm = () => {
                         required
                     ></textarea>
                 </div>
-
-                <div data-netlify-recaptcha="true"></div>
 
                 <div className="buttons">
                     <button type="reset">Reset</button>
