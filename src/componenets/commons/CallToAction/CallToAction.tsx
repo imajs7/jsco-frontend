@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link} from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import './CallToAction.css';
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 const CallToAction = ( { text1, action1, text2, action2 } : Props ) => {
     return ( 
         <div className="call-to-action">
-            <Link to={action1} className='btn'>{text1}</Link>
+            <a href={action1} className='btn'>{text1}</a>
             <Link to={action2} className='btn'>{text2}</Link>
         </div>
      );
