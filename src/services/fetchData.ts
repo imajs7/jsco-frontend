@@ -4,7 +4,7 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const getSiteData = async () => {
   try {
-    const response = await axios.get( `${baseUrl}` );
+    const response = await axios.get( `${baseUrl}/jscoml` );
     return response.data;
   } catch( error ) {
       console.log( error as Error );

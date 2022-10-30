@@ -1,6 +1,38 @@
+import { ChangeEvent, useState } from 'react';
 import './ContactForm.css';
 
+type msgBody = {
+    firstName: string,
+    lastName: string,
+    email: string,
+    message: string
+}
+
 const ContactForm = () => {
+
+    const [ msgBody, setMsgBody ] = useState<msgBody>({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
+
+    const onChangeHandler = ( { currentTarget } : ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) => {
+        setMsgBody({
+            ...msgBody,
+            [currentTarget.name]: currentTarget.value
+        });
+    };
+
+    const reset = () => {
+        setMsgBody({
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: ''
+        });
+    };
+    
     return ( 
         <div className="contact-form border">
 
@@ -13,13 +45,17 @@ const ContactForm = () => {
                         type="text" 
                         name="firstName" 
                         id="firstName" 
+                        value={msgBody.firstName}
                         placeholder="Enter First Name *" 
+                        onChange={onChangeHandler}
                         required
                     />
                     <input 
                         type="text" 
                         name="lastName" 
                         id="lastName" 
+                        value={msgBody.lastName}
+                        onChange={onChangeHandler}
                         placeholder="Enter Last Name" 
                     />
                 </div>
@@ -29,6 +65,8 @@ const ContactForm = () => {
                         type="email" 
                         name="email" 
                         id="email" 
+                        value={msgBody.email}
+                        onChange={onChangeHandler}
                         placeholder="Enter email address *" 
                         required
                     />
@@ -36,18 +74,20 @@ const ContactForm = () => {
 
                 <div className="message">
                     <textarea 
-                        name="form-message" 
-                        id="form-message" 
+                        name="message" 
+                        id="message" 
                         cols={30} 
                         rows={10} 
+                        value={msgBody.message}
+                        onChange={onChangeHandler}
                         placeholder="Enter your message *" 
                         required
                     ></textarea>
                 </div>
 
                 <div className="buttons">
-                    <button type="reset">Reset</button>
-                    <button type="submit">Send message</button>
+                    <button className='btn' type="reset" onClick={reset}>Reset</button>
+                    <button className='btn' type="submit">Send message</button>
                 </div>
 
             </form>

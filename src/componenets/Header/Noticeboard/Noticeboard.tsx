@@ -30,7 +30,7 @@ const Noticeboard = () => {
                 ( notice !== '' ) && 
                 <div className='noticeboard'>
                     <p>{notice}</p>
-                    <button onClick={dismiss}>Dismiss</button>
+                    <button className="btn" onClick={dismiss}>Dismiss</button>
                 </div>
             }
         </>

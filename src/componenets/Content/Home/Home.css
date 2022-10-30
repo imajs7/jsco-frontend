@@ -1,41 +1,38 @@
 .hero-section {
+  background-position: center center;
+  background-size: cover;
+  color: white;
+}
+
+.hero-section > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
   height: calc(100vh - 45px);
-  background-position: center center;
-  background-size: cover;
-  color: white;
 }
 
-.hero-section > .site-info > h1 {
+.site-info > h1 {
   font-family: "Orbitron", sans-serif;
-  font-size: 64px;
+  font-size: 56px;
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: black;
 }
 
-.hero-section > .site-info > h5 {
+.site-info > h5 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 34px;
-  /* -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black; */
+  font-size: 30px;
 }
 
-.hero-section > p {
-  width: min(100%, 800px);
+.hero-section > div > p {
+  width: min(100%, 700px);
   font-size: 18px;
-}
-
-.call-to-action > *:not(:last-child) {
-  margin-inline-end: 10px;
 }
 
 .our-usp {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
   margin-block: 80px;
 }
@@ -44,6 +41,7 @@
   padding: 20px;
   box-shadow: 0 0 10px rgb(0 0 0 /0.4);
   border-radius: 4px;
+  flex: 1 1 0;
 }
 
 .card > div:not(:last-child) {
@@ -68,7 +66,7 @@
 .second-cta--image > img {
   aspect-ratio: 1;
   object-fit: cover;
-  height: 450px;
+  height: min(100vw - 60px, 450px);
   border-radius: 450px;
   filter: drop-shadow(5px 5px 10px rgb(0 0 0 / 0.4));
   border: 6px solid #aaa;

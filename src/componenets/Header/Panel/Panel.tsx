@@ -8,11 +8,13 @@ const Panel = () => {
     const [ bannerImage, setBannerImage ] = useState<string>('//unsplash.it/1400/150');
     const [ bannerAction, setBannerAction ] = useState<string>('');
 
+    const baseUrl = process.env.REACT_APP_BASE_URL;
+
     useEffect( () => {
         async function getData() {
             try{
                 const data = await getSiteData();
-                setBannerImage( data.banner.image );
+                setBannerImage( baseUrl + data.banner.image );
                 setBannerAction( data.banner.action );
             } catch ( error ) {
                 console.log( error as string );

@@ -1,5 +1,7 @@
 import React from 'react';
 import useDocumentTitle from '../../../utils/useDocumentTitle';
+import { siteInfo } from '../../../services/LocalData';
+import './About.css';
 
 const About = () => {
 
@@ -7,9 +9,21 @@ const About = () => {
 
     return ( 
         <>
-            <div className="add-padding">
-                <h2>Content area comin from about page</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum assumenda at expedita odit autem quasi alias est, hic incidunt sit libero minima earum sed dolor a consequuntur nam placeat.</p>
+            <div className="about container">
+                <h2>{siteInfo.aboutPage.title}</h2>
+                <p>{siteInfo.tagLine}</p>
+                <p>{siteInfo.aboutPage.content}</p>
+                <p>{siteInfo.shortIntro}</p>
+                <h2>{siteInfo.objective.title}</h2>
+                <p>{siteInfo.objective.content}</p>
+                <h2>{siteInfo.techStack.title}</h2>
+                <p>{siteInfo.techStack.content}</p>
+                <h2>{siteInfo.usp.item1.title}</h2>
+                <p>{siteInfo.usp.item1.content}</p>
+                <h2>{siteInfo.usp.item2.title}</h2>
+                <p>{siteInfo.usp.item2.content}</p>
+                <h2>{siteInfo.usp.item3.title}</h2>
+                <p>{siteInfo.usp.item3.content}</p>
             </div>
         </>
      );

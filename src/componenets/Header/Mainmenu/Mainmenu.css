@@ -17,9 +17,9 @@ nav {
 }
 
 .mainmenu > li > a:hover {
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid black;
 }
 
 .active {
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid black;
 }

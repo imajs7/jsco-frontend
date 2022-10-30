@@ -1,0 +1,7 @@
+.about {
+  margin-block: 60px;
+}
+
+.about > * {
+  margin-block: 30px;
+}
